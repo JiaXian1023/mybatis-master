@@ -21,21 +21,22 @@ CREATE TABLE `user` (
 -- 列出以下資料庫的數據： `user`
 
 
-generatorConfg.xml  
-		<javaModelGenerator targetPackage="com.aarestu.mybatis.entity" targetProject="src/main/java">
+generatorConfg.xml 
+set Database jdbcConnection( <jdbcConnection driverClass="com.mysql.jdbc.Driver" ...) 
+<javaModelGenerator targetPackage="com.aarestu.mybatis.entity" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
-        </javaModelGenerator>
+</javaModelGenerator>
         
-        <sqlMapGenerator targetPackage="mapper.com.aarestu.mybatis" targetProject="src/main/resources">
+<sqlMapGenerator targetPackage="mapper.com.aarestu.mybatis" targetProject="src/main/resources">
             <property name="enableSubPackages" value="true"/>
-        </sqlMapGenerator>
+</sqlMapGenerator>
         
-        <javaClientGenerator targetPackage="com.aarestu.mybatis.dao" targetProject="src/main/java" type="XMLMAPPER">
+<javaClientGenerator targetPackage="com.aarestu.mybatis.dao" targetProject="src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
-        </javaClientGenerator>
-        
-		產生dao路徑
-		set Database jdbcConnection( <jdbcConnection driverClass="com.mysql.jdbc.Driver" ...)
+</javaClientGenerator>  
+產生dao路徑
+
+	   
 eclipse  maven  >>>>tomcat:run
 執行後產生dao.xml
