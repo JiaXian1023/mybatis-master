@@ -38,5 +38,5 @@ set Database jdbcConnection( <jdbcConnection driverClass="com.mysql.jdbc.Driver"
 產生dao路徑
 
 	   
-eclipse  maven  >>>>tomcat:run
+eclipse  maven  >>>>generate-sources
 執行後產生dao.xml
